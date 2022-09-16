@@ -1,10 +1,11 @@
 namespace CSharp_MySQL_CRUD
 {
-    public partial class Form1 : Form
+    public partial class FormStudentInfo : Form
     {
-        public Form1()
+        public FormStudentInfo()
         {
             InitializeComponent();
         }
+
     }
 }
