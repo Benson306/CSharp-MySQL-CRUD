@@ -147,30 +147,35 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "id";
             this.Column1.HeaderText = "#";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "name";
             this.Column2.HeaderText = "Name";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "reg";
             this.Column3.HeaderText = "Reg";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "class";
             this.Column4.HeaderText = "Class";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "section";
             this.Column5.HeaderText = "Section";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -205,6 +210,7 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Text = "Delete";
+            this.Column7.UseColumnTextForButtonValue = true;
             // 
             // txtSearch
             // 
@@ -213,6 +219,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(269, 23);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pictureBox1
             // 
@@ -251,6 +258,7 @@
             this.Name = "FormStudentInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Info";
+            this.Shown += new System.EventHandler(this.FormStudentInfo_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

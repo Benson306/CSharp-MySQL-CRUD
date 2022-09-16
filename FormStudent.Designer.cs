@@ -31,15 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbltext = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtClass = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtReg = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtSection = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.txtReg = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtClass = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -82,53 +82,19 @@
             this.panel2.Size = new System.Drawing.Size(424, 368);
             this.panel2.TabIndex = 0;
             // 
-            // label1
+            // btnSave
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(48, 57);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(319, 23);
-            this.txtName.TabIndex = 1;
-            // 
-            // txtClass
-            // 
-            this.txtClass.Location = new System.Drawing.Point(48, 181);
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(319, 23);
-            this.txtClass.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Class:";
-            // 
-            // txtReg
-            // 
-            this.txtReg.Location = new System.Drawing.Point(48, 119);
-            this.txtReg.Name = "txtReg";
-            this.txtReg.Size = new System.Drawing.Size(319, 23);
-            this.txtReg.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Reg. :";
+            this.btnSave.BackColor = System.Drawing.Color.Navy;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(48, 293);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(131, 41);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtSection
             // 
@@ -146,18 +112,53 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Section:";
             // 
-            // btnSave
+            // txtReg
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Navy;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(48, 293);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(131, 41);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.txtReg.Location = new System.Drawing.Point(48, 119);
+            this.txtReg.Name = "txtReg";
+            this.txtReg.Size = new System.Drawing.Size(319, 23);
+            this.txtReg.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(48, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Reg. :";
+            // 
+            // txtClass
+            // 
+            this.txtClass.Location = new System.Drawing.Point(48, 181);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(319, 23);
+            this.txtClass.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(48, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Class:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(48, 57);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(319, 23);
+            this.txtName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
             // 
             // FormStudent
             // 
