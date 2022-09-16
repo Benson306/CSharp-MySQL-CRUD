@@ -13,12 +13,26 @@ namespace CSharp_MySQL_CRUD
     public partial class FormStudent : Form
     {
         private readonly FormStudentInfo _parent;
+        public string id, name, reg, section, @class;
         public FormStudent(FormStudentInfo parent)
         {
             InitializeComponent();
             _parent = parent;
         }
-
+        public void UpdateInfo()
+        {
+            lbltext.Text = "Update Student Details";
+            btnSave.Text = "update";
+            txtName.Text = name;
+            txtClass.Text = @class;
+            txtReg.Text = reg;
+            txtSection.Text = section;
+        }
+        public void saveInfo()
+        {
+            lbltext.Text = "Add Student";
+            btnSave.Text = "Save";
+        }
         public void clear()
         {
             txtName.Text = txtClass.Text = txtReg.Text = txtSection.Text = String.Empty;
@@ -52,6 +66,13 @@ namespace CSharp_MySQL_CRUD
                 DbStudent.addStudent(std);
                 clear();
             }
+            if (btnSave.Text == "update")
+            {
+                Student std = new Student(txtName.Text.Trim(), txtReg.Text.Trim(), txtClass.Text.Trim(), txtSection.Text.Trim());
+                DbStudent.updateStudent(std, id);
+                clear();
+            }
+
             _parent.Display();
         }
     }
